@@ -1,0 +1,78 @@
+.navbar_test {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(
+    65.82deg,
+    rgba(34, 114, 255, 0.36) 12.08%,
+    rgba(179, 108, 213, 0.82) 83.73%,
+    rgba(217, 217, 217, 0) 134.91%
+  );
+  padding: 40px 140px;
+  font-family: var(--main--font);
+  gap: 10px;
+}
+.navbar_test > ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+.language > button {
+  border: 2px solid rgba(34, 114, 255, 1);
+  padding: 10px 50px;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #2272ff;
+  cursor: pointer;
+}
+.login > button {
+  border: 2px solid rgba(34, 114, 255, 1);
+  padding: 10px 50px;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #2272ff;
+  cursor: pointer;
+}
+.register > button {
+  border: 2px solid rgba(34, 114, 255, 1);
+  padding: 10px 50px;
+  border-radius: 10px;
+  background-color: #2272ff;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.navbar__menu i {
+  font-size: 12px;
+}
+.navbar__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar__menu ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 200px;
+}
+.navbar__menu > ul > li > a {
+  font-family: var(--main--font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: var(--black--text);
+}
+.navbar {
+  background-color: var(--gray--color);
+}
+.navbar__logo h3 a {
+  font-family: "Cinzel", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 49px;
+  color: var(--black--text);
+}

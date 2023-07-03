@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+:root {
+  --main--font: "Inter", sans-serif;
+  --white--text: #ffffff;
+  --black--text: #000000;
+  --blue--color: #2272ff;
+  --gray--color: #d9d9d9;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: none;
+}

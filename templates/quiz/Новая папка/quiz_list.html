@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Quiz{% endblock title %}
+
+{% block add_css %}
+    <link rel="stylesheet" href="{% static 'quiz/css/quiz.css' %}"/>
+{% endblock add_css %}
+
+{% block content %}
+    <section class="test">
+        <div class="container">
+            <h2>Ödənişsiz test</h2>
+            <div class="test__box">
+                {% for quiz in quizzes %}
+                    <div class="test__box-item">
+                        <img src="{{ quiz.image.url }}" alt=""/>
+                        <h3>{{ quiz.title }}</h3>
+                        {{ quiz.description|linebreaks }}
+                        <a href="{{ quiz.get_absolute_url }}">
+                            <button>Başla</button>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>W
+{% endblock content %}
+    

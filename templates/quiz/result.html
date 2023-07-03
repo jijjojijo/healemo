@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+    <section>
+        <div class="container">
+            <div class="result_text">
+                <h3><a href="{{ quiz.get_absolute_url }}">{{ quiz }}</a></h3>
+                <p>Bu testi uğurla keçdiyiniz üçün sizi təbrik edirik! Cavablarınızı dəyərləndirdik.</p>
+                <br>
+                {{ result.description }}
+            </div>
+            <div class="result_page">
+                <h3>
+                    Sizin üçün uyğun olacaq psixoloqumuz
+                </h3>
+                <img src="{{ result.coach.image.url }}" alt="">
+                <h4>{{ result.coach.name }}</h4>
+                <p style="margin-bottom: 30px; font-size: 20px">{{ result.coach.description }}</p>
+            </div>
+        </div>
+    </section>
+{% endblock %}

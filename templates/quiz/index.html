@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Healemo{% endblock %}
+
+{% block header %}
+    <div class="header__body">
+        <div class="container">
+            <div class="header__body__text">
+                <h2>Özünü bizimlə kəşf et</h2>
+            </div>
+            <div class="header__body__button">
+                <a href="{% url 'quiz_list' %}">
+                    <h3> Ödənişsiz testdən keç!</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block content %}
+    <section class="aboutuss">
+        <div class="container">
+            <div class="aboutus">
+                <div class="aboutus__text">
+                    <h3>Varlığını <i>Healemo</i> ilə tap!</h3>
+                </div>
+                <div class="aboutus__text__subtitle">
+                    <div class="aboutus_us">
+                        <img src="assets/images/Group 3.png" alt=""/>
+                        <h3>Stressdən və digər problemlərdən uzaq olun.</h3>
+                    </div>
+                    <div class="aboutus_us">
+                        <img src="assets/images/Group 3.png" alt=""/>
+                        <h3>Ağlınızı və həyatınızı gücləndirin.</h3>
+                    </div>
+                    <div class="aboutus_us">
+                        <img src="assets/images/Group 3.png" alt/>
+                        <h3>İnkişafa deyil, vaxta qənaət edin.</h3>
+                    </div>
+                    <div class="aboutus_us">
+                        <img src="assets/images/Group 3.png" alt=""/>
+                        <h3>Tam peşəkar terapevtlərə və məşqçilər ilə işləmək.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="workers">
+        <div class="container">
+            <div class="workers__container">
+                <div class="workers__slider_right">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </div>
+                <div class="workers__text">
+                    <h2>Professional koç və terapevtləri kəşf edin!</h2>
+                </div>
+                <div class="workers__profile">
+                    <div class="workers__body">
+
+                        <a href="{% url 'profile' %}"><img src="{% static 'assets/images/Rectangle 13.png' %}"
+                                                           alt=""></a>
+                        <h4>Sabina Babayeva <br>
+                            Nəfəs terapevti</h4>
+                    </div>
+                    <div class="workers__body">
+                        <a href="{% url 'profile' %}"><img src="{% static 'assets/images/Rectangle 12.png' %}"
+                                                           alt=""></a>
+                        <h4>Jane Giebler <br>
+                            Art terapevti</h4>
+                    </div>
+                    <div class="workers__body">
+                        <a href="{% url 'profile' %}"><img src="{% static 'assets/images/Rectangle 14.png' %}"
+                                                           alt=""></a>
+                        <h4>Sussana Mia <br>
+                            Yaşam terapevti</h4>
+                    </div>
+                    <div class="workers__body">
+                        <a href="{% url 'profile' %}"><img src="{% static 'assets/images/Rectangle 12.png' %}"
+                                                           alt=""></a>
+                        <h4>Jane Giebler <br>
+                            Art terapevti</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="questions">
+        <div class="container">
+            <h2 class="title">Çox verilən suallar</h2>
+            <div class="question" onclick="toggleAnswer('answer1')">Healemo nədir?</div>
+            <div class="answer" id="answer1">
+                <p>Healemo psixoloji dəstək verən bir platformadır</p>
+            </div>
+            <hr>
+            <div class="question" onclick="toggleAnswer('answer2')">Aylıq yoxlanış istifadə bitdikdə nə olur?</div>
+            <div class="answer" id="answer2">
+                <p>Aylıq yoxlanış istifadə bitdikdən sonra...</p>
+            </div>
+            <hr>
+            <div class="question" onclick="toggleAnswer('answer3')">Healemo da terapevt ola bilərəm?</div>
+            <div class="answer" id="answer3">
+                <p>Healemo da terapevt olmaq üçün...</p>
+            </div>
+        </div>
+    </section>
+{% endblock %}

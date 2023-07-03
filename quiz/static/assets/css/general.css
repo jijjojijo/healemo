@@ -1,0 +1,77 @@
+.topnav {
+  background-color: #2272ff;
+}
+.topnav__section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topnav__right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topnav__right a {
+  font-family: var(--main--font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #2272ff;
+}
+.topnav__right-item1 {
+  border: 1px solid white;
+  background-color: white;
+  box-shadow: 5px 6px 6px hsl(0deg 0% 0% / 0.38);
+  border-radius: 30px;
+  padding: 8px 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+.topnav__right-item2 {
+  border: 1px solid white;
+  background-color: white;
+  box-shadow: 5px 6px 6px hsl(0deg 0% 0% / 0.38);
+  border-radius: 30px;
+  padding: 8px 35px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.topnav__left > p > a {
+  text-decoration: none;
+  list-style: none;
+  font-family: var(--main--font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--white--text);
+}
+.topnav__right {
+  font-family: var(--main--font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: var(--white--text);
+}
+.header__body {
+  position: relative;
+  background-image: url(../css/annie-spratt-TywjkDHf0Ps-unsplash1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 743px;
+}
+.header__body__text h2 {
+  font-family: var(--main--font);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 113px;
+  color: var(--white--text);
+  max-width: 778px;
+  position: absolute;
+  top: 334px;
+  left: 115px;
+}

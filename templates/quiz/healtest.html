@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Healemo{% endblock %}
+
+{% block content %}
+    <section>
+        <div class="container">
+            <div class="main_text">
+                <h3>{{ quiz }}</h3>
+                {{ quiz.description|safe }}
+            </div>
+            <div class="main_test">
+                {% for question in quiz.questions.all %}
+                    <div class="test1">
+                        <h3>{{ forloop.counter }}- {{ question }}</h3>
+                        <div class="test_test">
+                            <ul class="quiz-answers">
+                                {% with forloop.counter0 as counter %}
+                                    {% for answer in question.answers.all %}
+                                        <li>
+                                            <label>
+                                                <input type="radio" name="question{{ counter }}"
+                                                       value="{{ answer.power }}"> {{ answer }}
+                                            </label>
+                                        </li>
+                                    {% endfor %}
+                                {% endwith %}
+                            </ul>
+                        </div>
+                    </div>
+                {% endfor %}
+                <div class="inputtext">
+                    <button class="inbutton" id="quiz-submit">Təsdiq et</button>
+                </div>
+{#                <button  style="font-size: 24px;">Get Results</button>#}
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block script %}
+    <script src="//cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+    <script type="application/javascript">
+        const csrftoken = Cookies.get('csrftoken');
+        const quizId = {{ quiz.id }};
+    </script>
+    <script src="{% static 'js/quiz.js' %}"></script>
+{% endblock %}
+
+{% block quizjs %}
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Healemo{% endblock %}
+
+{% block content %}
+    <section class="test">
+        <div class="container">
+            <h2>Ödənişsiz test</h2>
+            <div class="test__box">
+                {% for quiz in quizzes %}
+                    <div class="test__box-item">
+                        <img src="{{ quiz.image.url }}" alt=""/>
+                        <h3>{{ quiz.title }}</h3>
+                        {{ quiz.description|safe }}
+                        <a href="{{ quiz.get_absolute_url }}">
+                            <button>Başla</button>
+                        </a>
+                    </div>
+                {% empty %}
+                    <h1>Test yoxdu </h1>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

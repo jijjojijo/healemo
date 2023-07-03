@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Quiz{% endblock title %}
+
+{% block add_css %}
+    <link rel="stylesheet" href="{% static 'quiz/css/quiz.css' %}"/>
+{% endblock add_css %}
+
+{% block content %}
+    <hr>
+    <div class="container" style="font-size: 24px;">
+        <div id="quiz-number" style="margin-top: 20px;margin-bottom: 10px;"></div>
+        <div id="quiz" style="margin-bottom: 20px">
+            {% for question in quiz.questions.all %}
+                <div class="quiz-item">
+                    <div class="quiz-question" style="margin-bottom: 10px;">{{ question }}</div>
+                    <div class="quiz-answers">
+                        {% with forloop.counter0 as counter %}
+                            {% for answer in question.answers.all %}
+                                <label>
+                                    <input type="radio" name="question{{ counter }}" value="{{ answer.power }}"> {{ answer }}
+                                </label>
+                                <br>
+                            {% endfor %}
+                        {% endwith %}
+                    </div>
+                    {% if forloop.last %}
+                        <button id="quiz-submit" style="font-size: 24px;">Get Results</button>
+                    {% else %}
+                        <button id="quiz-next" style="font-size: 24px;">Next</button>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+        <div id="quiz-results" style="margin-bottom: 20px"></div>
+    </div>
+{% endblock content %}
+{% block add_js %}
+    <script src="{% static 'quiz/js/../../../static/js/quiz.js' %}"></script>
+{% endblock add_js %}
